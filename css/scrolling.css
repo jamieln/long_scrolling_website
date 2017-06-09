@@ -1,0 +1,168 @@
+h1{
+  font-family: 'Frijole', cursive;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  font-size: 6em;
+}
+
+body{
+  height: 15000px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#71f2e3+0,71f2e3+5,acdfe8+5,85d7e5+17,27c8e5+44,006ec9+100 */
+  /*background-color:*/
+  background-image:
+  url("img/waves1.png"),
+  url("img/polarbear.png"),
+  url("img/waves2.png"),
+  url("img/mountains.png"),
+  linear-gradient(to bottom, #d5f0f2 0%,#a6eff4 11%,#6dedf7 13%,#27c8e5 44%,#006ec9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-repeat:
+    repeat-x,
+    no-repeat,
+    repeat-x,
+    no-repeat,
+    repeat;
+  background-position:
+    0 12.5%, /*x y*/ /*front wave*/
+    650px 11.4%,
+    0 12.4%, /*back wave*/
+    350px 10.5%,
+    top left;
+
+  animation: 10s waves ease-in-out infinite;
+}
+
+@keyframes waves {
+  50%{
+    background-position:
+      100px 12.5%,
+      550px 11.4%,
+      -100px 12.35%,
+      350px 10.5%,
+      top left;
+    }
+  }
+
+.polar_bear{
+  height: 200px;
+  line-height: 400px; /* <-- this is what you must define */
+  text-align: center;
+  color: white;
+  font-family: 'Frijole', cursive;
+  font-size: 6em;
+}
+
+#vert_counter{
+ width:150px;
+position:fixed;
+line-height: 50px;
+text-align: center;
+ height:50px;
+ top:0px;
+ left: 0px;
+ border: 5px black solid;
+background-color:#fff;
+font-family: sans-serif;
+font-weight: 900;
+letter-spacing: 1px;
+font-size: 20px;
+z-index: 100;
+}
+
+.penguins{
+  font-size: 6em;
+  height: 200px;
+  line-height: 2000px; /* <-- this is what you must define */
+  text-align: center;
+  color: white;
+  font-family: 'Chewy', cursive;
+}
+
+#penguin1 {
+  position: absolute;
+  top:1400px;
+  left:-100px;
+}
+
+#penguin2 {
+  position: absolute;
+  top:2000px;
+  right:-300px;
+}
+
+.trout{
+  font-size: 6em;
+  height: 200px;
+  line-height: 6100px; /* <-- this is what you must define */
+  text-align: center;
+  color: white;
+  font-family: 'Chewy', cursive;
+}
+
+#trout1 {
+  position: absolute;
+  top:3700px;
+  left:-100px;
+}
+
+#trout2 {
+  position: absolute;
+  top:4600px;
+  right:-400px;
+}
+
+
+.whales{
+  font-size: 6em;
+  height: 200px;
+  line-height: 11100px; /* <-- this is what you must define */
+  text-align: center;
+  color: white;
+  font-family: 'Chewy', cursive;
+}
+
+#whale1 {
+  position: absolute;
+  top:6900px;
+  left:-100px;
+}
+
+#whale2 {
+  position: absolute;
+  top:9200px;
+  right:-400px;
+}
+
+.turtles{
+  font-size: 6em;
+  height: 200px;
+  line-height: 200px; /* <-- this is what you must define */
+  text-align: center;
+  color: white;
+  font-family: 'Chewy', cursive;
+}
+
+#turtle1 {
+  position: absolute;
+  top:11000px;
+  left:-100px;
+}
+
+#turtle2 {
+  position: absolute;
+  top:12100px;
+  right:-400px;
+}
+
+/*ABOUT PAGE STUFF BELOW*/
+
+.about{
+  font-size: 6em;
+  height: 200px;
+  line-height: 26100px; /* <-- this is what you must define */
+  text-align: center;
+  color: white;
+  font-family: 'Chewy', cursive;
+}
+
+a:link {color: white}
