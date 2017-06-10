@@ -1,194 +1,118 @@
-h1{
-  font-family: 'Frijole', cursive;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #00afe9;
+  align-self: center;
+	text-align: center;
+}
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: 400;
-  text-align: center;
-  color: white;
-  font-size: 6.5em;
+  font-size: 4em;
+  color: #fff;
 }
 
-body{
-  height: 15000px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d5f0f2+0,a6eff4+7,6dedf7+10,27c8e5+44,006ec9+100  */
-  /*background-color:*/
-  background-image:
-  url("../img/cloud1.png"),
-  url("../img/cloud2.png"),
-  url("../img/cloud3.png"),
-  url("../img/waves1.png"),
-  url("../img/polarbear.png"),
-  url("../img/waves2.png"),
-  url("../img/mountains.png"),
-  linear-gradient(to bottom, #d5f0f2 0%,#a6eff4 7%,#6dedf7 10%,#27c8e5 44%,#006ec9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    repeat-x,
-    no-repeat,
-    repeat-x,
-    no-repeat,
-    repeat;
-  background-position:
-    300px 6.7%,
-    650px 7.1%,
-    1000px 6.8%,
-    0 9.45%, /*x y*/ /*front wave*/
-    700px 8.7%,
-    0 9.35%, /*back wave*/
-    425px 7.9%,
-    top left;
-
-  animation: 10s waves ease-in-out infinite;
+.bubbles {
+display: inline-block;
+font-family: arial;
+position: relative;
 }
 
-@keyframes waves {
-  50%{
-    background-position:
-      350px 6.7%,
-      700px 7.1%,
-      1050px 6.8%,
-      100px 9.45%,
-      600px 8.7%,
-      -100px 9.35%,
-      425px 7.9%,
-      top left;
-    }
+.bubbles h1 {
+position: relative;
+margin: 1em 0 0;
+font-family: 'Chewy', cursive;
+font-weight: 400;
+text-shadow: 2px 2px #d5f0f2;
+color: #fff;
+z-index: 2;
+}
+
+.individual-bubble {
+position: absolute;
+border-radius: 100%;
+bottom: 10px;
+background-color: #fff;
+z-index: 1;
+}
+
+/* Button resets and style */
+button {
+	margin: 15px auto;
+	font-family: 'Chewy', cursive;
+  text-shadow: 2px 2px #d5f0f2;
+  font-weight: 400;
+	font-size: 20px;
+	color: #00afe9;
+	cursor: pointer;
+	border-radius: 100px;
+	padding: 15px 20px;
+	border: 0px solid #000;
+  background: white;
+	}
+
+/* Initiate Auto-Pulse animations */
+button.pulse-button {
+	animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in;
+}
+
+/* Initiate color change for pulse-on-hover */
+button.pulse-button-hover {
+	animation: colorShift 10000ms infinite ease-in;
+}
+
+/* Continue animation and add shine on hover */
+button:hover,
+button:focus {
+	animation: borderPulse 1000ms infinite ease-out, colorShift 10000ms infinite ease-in, hoverShine 200ms;
+}
+
+
+/* Declare border pulse animation */
+@keyframes borderPulse {
+  0% {
+    box-shadow: inset 0px 0px 0px 5px rgba(255, 255, 255,.4), 0px 0px 0px 0px rgba(255,255,255,1);
   }
-
-.polar_bear{
-  height: 200px;
-  line-height: 400px; /* <-- this is what you must define */
-  text-align: center;
-  color: white;
-  font-family: 'Frijole', cursive;
-  font-size: 5em;
-  text-shadow: 2px 2px #d5f0f2;
+  100% {
+    box-shadow: inset 0px 0px 0px 3px rgba(117, 117, 255,.2), 0px 0px 0px 10px rgba(255,255,255,0);
+  }
 }
 
-#vert_counter{
- width:150px;
-position:fixed;
-line-height: 50px;
-text-align: center;
- height:50px;
- top:0px;
- left: 0px;
-background-color: rgba(255,255,255,.001);
-font-family: sans-serif;
-font-weight: 900;
-color: rgba(255,255,255,.001);
-letter-spacing: 1px;
-font-size: 20px;
-z-index: 100;
-
+/* Declare shine on hover animation */
+@keyframes hoverShine {
+	0%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
+	}
+	50%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.4) 50%, rgba(255,255,255,0) 100%);
+	}
+	100%{
+		background-image: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,.4) 100%);
+	}
 }
 
-.penguins{
-  font-size: 6em;
-  height: 200px;
-  line-height: 2500px; /* <-- this is what you must define */
-  text-align: center;
-  color: white;
-  font-family: 'Chewy', cursive;
-  text-shadow: 2px 2px #d5f0f2;
-}
-
-#penguin1 {
-  position: absolute;
-  top:1700px;
-  left:-100px;
-}
-
-#penguin2 {
-  position: absolute;
-  top:2500px;
-  right:-300px;
-}
-
-.trout{
-  font-size: 6em;
-  height: 200px;
-  line-height: 7300px; /* <-- this is what you must define */
-  text-align: center;
-  color: white;
-  font-family: 'Chewy', cursive;
-  text-shadow: 2px 2px #d5f0f2;
-}
-
-#trout1 {
-  position: absolute;
-  top:4300px;
-  left:-100px;
-}
-
-#trout2 {
-  position: absolute;
-  top:5300px;
-  right:-400px;
-}
-
-
-.whales{
-  font-size: 6em;
-  height: 200px;
-  line-height: 12500px; /* <-- this is what you must define */
-  text-align: center;
-  color: white;
-  font-family: 'Chewy', cursive;
-  text-shadow: 2px 2px #d5f0f2;
-}
-
-#whale1 {
-  position: absolute;
-  top:7600px;
-  left:-100px;
-}
-
-#whale2 {
-  position: absolute;
-  top:9900px;
-  right:-400px;
-}
-
-.turtles{
-  font-size: 6em;
-  height: 200px;
-  line-height: 21250px; /* <-- this is what you must define */
-  text-align: center;
-  color: white;
-  font-family: 'Chewy', cursive;
-  text-shadow: 2px 2px #d5f0f2;
-}
-
-#turtle1 {
-  position: absolute;
-  top:11700px;
-  left:-100px;
-}
-
-#turtle2 {
-  position: absolute;
-  top:12700px;
-  right:-400px;
-}
-
-/*ABOUT PAGE STUFF BELOW*/
-
-.about{
-  font-size: 6em;
-  height: 200px;
-  line-height: 26000px; /* <-- this is what you must define */
-  text-align: center;
-  color: white;
-  font-family: 'Chewy', cursive;
-  text-shadow: 3px 3px #d5f0f2;
-}
-
-a:link {color: white}
-a:visited {color: white}
+a:link {color: #00afe9}
+a:visited {color: #00afe9}
 a:link {
     text-decoration: none;
 }
 a:hover {
     color: #d5f0f2;
+    text-shadow: 2px 2px white;
 }
