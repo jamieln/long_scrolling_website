@@ -24,7 +24,6 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 400;
-  font-size: 4em;
   color: #fff;
 }
 
@@ -39,6 +38,7 @@ position: relative;
 margin: 1em 0 0;
 font-family: 'Chewy', cursive;
 font-weight: 400;
+font-size: 4em;
 text-shadow: 2px 2px #d5f0f2;
 color: #fff;
 z-index: 2;
@@ -50,6 +50,10 @@ border-radius: 100%;
 bottom: 10px;
 background-color: #fff;
 z-index: 1;
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Button resets and style */
@@ -115,4 +119,17 @@ a:link {
 a:hover {
     color: #d5f0f2;
     text-shadow: 2px 2px white;
+}
+
+a:link.resources {
+  color: #006ec9;
+  font-weight: bold;
+}
+a:visited.resources {
+  color: #006ec9;
+  font-weight: bold;
+}
+
+a:hover.resources {
+  text-shadow: none;
 }
